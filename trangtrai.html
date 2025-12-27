@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chăn Nuôi Hữu Cơ — Sản Phẩm Sạch, Niềm Tin Vững Bền</title>
+  <meta name="description" content="Website giới thiệu và quảng bá sản phẩm chăn nuôi hữu cơ: nguồn gốc, quy trình, chứng nhận và liên hệ mua hàng." />
+
+  <!-- Google font (no external import required if offline, but left here for clarity) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====== Reset & Base ====== */
+    :root{
+      --brand:#2a8f5a;
+      --accent:#98c77a;
+      --muted:#6b7280;
+      --bg:#f7faf6;
+      --card:#ffffff;
+      --max-width:1100px;
+      --radius:12px;
+      --shadow: 0 6px 20px rgba(17,24,39,0.08);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{width:100%;max-width:var(--max-width)}
+
+    /* ====== Header ====== */
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)
+    }
+    nav ul{list-style:none;padding:0;margin:0;display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a.cta{background:var(--brand);color:white;padding:10px 14px;border-radius:10px}
+
+    /* ====== Hero ====== */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:26px}
+    .hero-left h1{margin:0 0 12px 0;font-size:28px}
+    .hero-left p{margin:0 0 18px;color:var(--muted)}
+    .controls{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn.primary{background:var(--brand);color:white}
+    .btn.ghost{background:transparent;border:1px solid #e6e9eb;color:var(--muted)}
+
+    .hero-right{background:linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.98));border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .stat{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+    .stat .n{font-weight:700;font-size:20px}
+    .stat .label{color:var(--muted);font-size:14px}
+
+    /* ====== Products Grid ====== */
+    .section{margin-bottom:28px}
+    .section h2{margin:0 0 14px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .card h3{margin:0;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price{font-weight:700;color:var(--brand)}
+    .tag{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef8ee;color:var(--brand);font-weight:600;font-size:12px}
+
+    /* ====== About & Certifications ====== */
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+    .cert{background:linear-gradient(180deg,#fff,#f6fff6);padding:12px;border-radius:10px}
+    .cert ul{padding-left:18px;margin:8px 0;color:var(--muted)}
+
+    /* ====== Contact ====== */
+    .contact{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+    .contact input, .contact textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9eb;margin-bottom:10px}
+
+    /* ====== Footer ====== */
+    footer{margin-top:24px;color:var(--muted);font-size:14px;padding:18px;text-align:center}
+
+    /* ====== Responsive ====== */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr}
+    }
+
+    /* Small helper */
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">CN</div>
+        <div>
+          <div style="font-weight:700">Chăn Nuôi Hữu Cơ</div>
+          <div style="font-size:13px;color:var(--muted)">Sản phẩm an toàn — Niềm tin bền vững</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#sanpham">Sản phẩm</a></li>
+          <li><a href="#vechungtoi">Về chúng tôi</a></li>
+          <li><a href="#chungnhan">Chứng nhận</a></li>
+          <li><a class="cta" href="#lienhe">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Thiết kế website quảng bá sản phẩm chăn nuôi hữu cơ</h1>
+          <p>Giới thiệu nguồn gốc, quy trình chăn nuôi, chứng nhận hữu cơ và kênh mua hàng trực tiếp từ nhà sản xuất.</p>
+          <div class="controls">
+            <button class="btn primary">Xem Sản Phẩm</button>
+            <button class="btn ghost">Tìm hiểu thêm</button>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <div class="stat"><div class="n">100%</div><div class="label">Nguồn gốc hữu cơ</div></div>
+          <div class="stat"><div class="n">2500+</div><div class="label">Khách hàng tin dùng</div></div>
+          <div class="stat"><div class="n">12</div><div class="label">Chứng nhận tiêu chuẩn</div></div>
+        </aside>
+      </section>
+
+      <!-- SẢN PHẨM -->
+      <section id="sanpham" class="section">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="grid">
+          <!-- Product 1 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Gà hữu cơ">
+            <div class="tag">Gà hữu cơ</div>
+            <h3>Gà thả vườn hữu cơ</h3>
+            <p class="muted">Nuôi theo tiêu chuẩn hữu cơ, không kháng sinh, thịt săn chắc, thơm ngon.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center"><div class="price">120.000₫/kg</div><button class="btn ghost">Mua ngay</button></div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Heo hữu cơ">
+            <div class="tag">Heo hữu cơ</div>
+            <h3>Heo rừng hữu cơ</h3>
+            <p class="muted">Thịt sạch, quy trình chăm sóc minh bạch, giàu dinh dưỡng.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center"><div class="price">95.000₫/kg</div><button class="btn ghost">Mua ngay</button></div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1558980664-10f6d6a85e2b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Trứng hữu cơ">
+            <div class="tag">Trứng hữu cơ</div>
+            <h3>Trứng ta hữu cơ</h3>
+            <p class="muted">Trứng tươi, vỏ mỏng, lòng đỏ đậm—thích hợp ăn trực tiếp và chế biến.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center"><div class="price">45.000₫/vỉ</div><button class="btn ghost">Mua ngay</button></div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Sữa hữu cơ">
+            <div class="tag">Sữa hữu cơ</div>
+            <h3>Sữa bò hữu cơ</h3>
+            <p class="muted">Sữa tươi nguyên chất, không chất bảo quản, giàu khoáng chất.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center"><div class="price">150.000₫/l</div><button class="btn ghost">Mua ngay</button></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT & CERTIFICATIONS -->
+      <section id="vechungtoi" class="section two-col">
+        <div>
+          <h2>Về chúng tôi</h2>
+          <p class="muted">Chúng tôi là một hệ thống các trang trại chăn nuôi hữu cơ, cam kết minh bạch từ quy trình thức ăn, chăm sóc đến thu hoạch. Mục tiêu là cung cấp sản phẩm an toàn cho người tiêu dùng và phát triển bền vững cho cộng đồng nông dân.</p>
+
+          <h3 style="margin-top:12px">Tại sao chọn sản phẩm hữu cơ?</h3>
+          <ul style="padding-left:18px;color:var(--muted)">
+            <li>Không sử dụng kháng sinh và hormone tăng trưởng.</li>
+            <li>Phương pháp chăn nuôi thân thiện với môi trường.</li>
+            <li>Nâng cao giá trị dinh dưỡng và an toàn thực phẩm.</li>
+          </ul>
+        </div>
+
+        <aside class="cert">
+          <h3>Chứng nhận & Tiêu chuẩn</h3>
+          <ul>
+            <li>Tiêu chuẩn hữu cơ quốc tế (ví dụ: USDA Organic / EU Organic)</li>
+            <li>Kiểm soát kháng sinh, nội dung minh bạch</li>
+            <li>Giấy chứng nhận xuất xứ trang trại</li>
+          </ul>
+          <p class="muted" style="font-size:13px;margin-top:8px">(Bạn có thể thay thế bằng logo chứng nhận thật và link đến file PDF.)</p>
+        </aside>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="lienhe" class="section">
+        <h2>Liên hệ đặt hàng / Hợp tác</h2>
+        <div class="grid">
+          <div class="contact">
+            <label for="name">Họ & Tên</label>
+            <input id="name" placeholder="Nguyễn Văn A" />
+
+            <label for="phone">Số điện thoại</label>
+            <input id="phone" placeholder="0123 456 789" />
+
+            <label for="message">Tin nhắn</label>
+            <textarea id="message" rows="4" placeholder="Nội dung liên hệ..."></textarea>
+
+            <div style="display:flex;gap:8px;justify-content:flex-end">
+              <button class="btn ghost">Xóa</button>
+              <button class="btn primary">Gửi</button>
+            </div>
+          </div>
+
+          <div style="background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow)">
+            <h3>Thông tin liên hệ</h3>
+            <p class="muted">Địa chỉ: Trang trại hữu cơ, Huyện X, Tỉnh Y</p>
+            <p class="muted">Hotline: 0xx-xxx-xxxx</p>
+            <p class="muted">Email: lienhe@channuoi-huuco.example</p>
+
+            <h4 style="margin-top:12px">Giờ làm việc</h4>
+            <p class="muted">Thứ 2 - Thứ 7: 07:30 - 17:30</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Chăn Nuôi Hữu Cơ — Thiết kế: Website mẫu. Mọi chi tiết bản quyền thuộc về chủ sở hữu.
+    </footer>
+  </div>
+
+  <script>
+    // nhỏ: gán năm hiện tại
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Các hành vi tương tác mẫu (có thể mở rộng bằng JS thực tế)
+    document.querySelectorAll('.btn.ghost').forEach(b=>b.addEventListener('click',e=>{
+      e.preventDefault();
+      if(b.textContent.includes('Mua')){ alert('Chức năng mua hàng mẫu — tích hợp với giỏ hàng/ thanh toán sau.'); }
+      else if(b.textContent.includes('Xóa')){ document.getElementById('name').value='';document.getElementById('phone').value='';document.getElementById('message').value=''; }
+    }));
+  </script>
+</body>
+</html>
